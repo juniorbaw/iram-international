@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>IRAM International — The Metal City · Fer à béton & matériaux premium · Sénégal</title>
+<meta name="description" content="IRAM International — International and Regional African Metal. Fer à béton local & importé FE 500 (Ø6–Ø32), béton prêt à l'emploi et matériaux de construction haut de gamme, livrés sur vos chantiers au Sénégal." />
+<meta name="theme-color" content="#070708" />
+<meta property="og:title" content="IRAM International — The Metal City" />
+<meta property="og:description" content="Nous forgeons l'avenir. Matériaux de construction premium au Sénégal." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' fill='%23070708'/%3E%3Cpath d='M46 28 H92 V92 H44 M44 28 V74' fill='none' stroke='%239aa0a6' stroke-width='3'/%3E%3Crect x='64' y='44' width='8' height='32' fill='%23b2d63b'/%3E%3Crect x='57' y='44' width='22' height='5' fill='%23b2d63b'/%3E%3Crect x='57' y='71' width='22' height='5' fill='%23b2d63b'/%3E%3C/svg%3E" />
+<style>
+:root{
+  --bg:#070708; --bg2:#0c0d10; --bg3:#101216;
+  --ink:#f3f1ec; --fog:#c4c8ce; --steel:#868d95; --steel-d:#474c54;
+  --acc:#b2d63b; --acc2:#c9ea4d; --acc-d:#33420f;
+  --line:rgba(255,255,255,.12); --line-2:rgba(255,255,255,.06);
+  --maxw:1320px; --mono:'JetBrains Mono',ui-monospace,monospace; --sans:'Archivo',system-ui,sans-serif;
+  --ease:cubic-bezier(.19,1,.22,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body.loading{overflow:hidden;height:100vh}
+h1,h2,h3,h4{font-weight:800;line-height:.96;letter-spacing:-.02em;text-transform:uppercase}
+img{max-width:100%;display:block}a{color:inherit;text-decoration:none}
+::selection{background:var(--acc);color:#0a0a0a}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 40px}
+.mono{font-family:var(--mono);font-weight:500;letter-spacing:.18em;text-transform:uppercase;font-size:.7rem}
+.acc{color:var(--acc)}
+.cursor,.cursor-dot{position:fixed;top:0;left:0;z-index:9999;pointer-events:none;border-radius:50%;mix-blend-mode:difference}
+.cursor{width:34px;height:34px;border:1px solid rgba(255,255,255,.6);transform:translate(-50%,-50%);transition:width .25s,height .25s,background .25s,border-color .25s}
+.cursor-dot{width:5px;height:5px;background:#fff;transform:translate(-50%,-50%)}
+.cursor.grow{width:64px;height:64px;background:rgba(255,255,255,.1);border-color:transparent}
+@media(hover:none){.cursor,.cursor-dot{display:none}}
+#preloader{position:fixed;inset:0;z-index:9000;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;transition:opacity .6s,visibility .6s}
+#preloader.done{opacity:0;visibility:hidden}
+.pl-logo svg{width:74px;height:74px}
+.pl-bar{display:flex;gap:7px}.pl-bar i{width:11px;height:11px;background:rgba(255,255,255,.08);display:block;transition:background .2s}.pl-bar i.on{background:var(--acc)}
+.pl-meta{display:flex;justify-content:space-between;width:300px;font-family:var(--mono);font-size:.62rem;letter-spacing:.24em;color:var(--steel);text-transform:uppercase}
+.hud{position:fixed;inset:0;z-index:80;pointer-events:none}
+.hud .edge{position:absolute;background:var(--line)}
+.hud .edge.t{top:16px;left:16px;right:16px;height:1px}.hud .edge.b{bottom:16px;left:16px;right:16px;height:1px}
+.hud .edge.l{top:16px;bottom:16px;left:16px;width:1px}.hud .edge.r{top:16px;bottom:16px;right:16px;width:1px}
+.hud .cn{position:absolute;width:14px;height:14px;border:1px solid var(--acc)}
+.hud .cn.tl{top:11px;left:11px;border-right:0;border-bottom:0}.hud .cn.tr{top:11px;right:11px;border-left:0;border-bottom:0}
+.hud .cn.bl{bottom:11px;left:11px;border-right:0;border-top:0}.hud .cn.br{bottom:11px;right:11px;border-left:0;border-top:0}
+.hud .tag{position:absolute;font-family:var(--mono);font-size:.56rem;letter-spacing:.22em;color:var(--steel);text-transform:uppercase}
+.hud .tag.lft{left:24px;top:50%;transform:rotate(-90deg) translateX(50%);transform-origin:left}
+.hud .tag.rgt{right:24px;bottom:64px;writing-mode:vertical-rl}
+@media(max-width:760px){.hud{display:none}}
+header{position:fixed;top:0;left:0;right:0;z-index:90;padding:24px 0;transition:padding .4s,background .4s,backdrop-filter .4s}
+header.scrolled{padding:12px 0;background:rgba(7,7,8,.72);backdrop-filter:blur(12px);border-bottom:1px solid var(--line-2)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:13px}.brand .mk{width:40px;height:40px;flex:none}
+.brand b{font-family:var(--sans);font-weight:800;letter-spacing:.2em;font-size:1rem}
+.brand small{display:block;font-family:var(--mono);font-size:.5rem;letter-spacing:.4em;color:var(--steel);margin-top:3px}
+.nav-right{display:flex;align-items:center;gap:12px}
+.nav-links{display:flex;gap:28px}
+.nav-links a{font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--fog);position:relative;padding:4px 0}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--acc);transition:width .35s var(--ease)}
+.nav-links a:hover::after{width:100%}
+.lang{display:flex;font-family:var(--mono);font-size:.62rem;border:1px solid var(--line)}
+.lang button{padding:7px 10px;background:transparent;border:0;color:var(--steel);cursor:pointer;font-family:var(--mono);font-weight:500}
+.lang button.active{background:var(--ink);color:var(--bg)}
+.chip{font-family:var(--mono);font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;padding:11px 20px;background:var(--acc);color:#0a0a0a;font-weight:700;cursor:pointer;clip-path:polygon(0 0,100% 0,100% 70%,calc(100% - 10px) 100%,0 100%);transition:background .3s,transform .3s var(--ease)}
+.chip:hover{background:var(--acc2);transform:translateY(-2px)}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}.burger span{width:24px;height:2px;background:var(--ink)}
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;background:var(--bg)}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:62% center;opacity:.72;transform:scale(1.12);animation:kb 26s ease-out forwards;filter:contrast(1.06) saturate(1.02)}
+@keyframes kb{to{transform:scale(1)}}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,7,8,.9),rgba(7,7,8,.35) 55%,transparent),linear-gradient(180deg,rgba(7,7,8,.5),transparent 30%,rgba(7,7,8,.92)),radial-gradient(135% 100% at 50% 50%,transparent 52%,rgba(0,0,0,.72))}
+.grain{position:fixed;inset:0;z-index:81;pointer-events:none;opacity:.05;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px 200px}
+#stage{position:absolute;inset:0;z-index:1;width:100%;height:100%;display:block}
+.hero-watermark{position:absolute;z-index:1;left:50%;top:42%;transform:translate(-50%,-50%);font-weight:900;font-size:min(34vw,30rem);letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1.2px rgba(255,255,255,.05);white-space:nowrap;pointer-events:none;user-select:none}
+.hero-inner{position:relative;z-index:2;width:100%;padding-top:90px;padding-bottom:7vh}
+.idx{position:absolute;left:40px;top:50%;transform:translateY(-50%);z-index:2;display:flex;flex-direction:column;gap:14px}
+.idx a{font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;color:var(--steel-d);text-transform:uppercase;transition:color .3s,padding .3s var(--ease)}
+.idx a:hover,.idx a.act{color:var(--ink);padding-left:8px}
+.idx a .b{display:inline-block;width:6px;height:6px;background:var(--acc);margin-right:9px;opacity:0;transition:opacity .3s}
+.idx a:hover .b,.idx a.act .b{opacity:1}
+.hero h1{font-size:clamp(2.9rem,9.5vw,9.5rem);font-weight:900;letter-spacing:-.03em}
+.hero h1 .ln{display:block;overflow:hidden}
+.hero h1 em{font-style:normal;color:var(--acc)}
+.hero .lede{max-width:50ch;color:var(--fog);font-size:clamp(1rem,1.3vw,1.18rem);font-weight:400;margin-top:26px}
+.hero-row{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;flex-wrap:wrap;margin-top:38px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.btn{font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;padding:16px 26px;cursor:pointer;display:inline-flex;align-items:center;gap:10px;transition:transform .3s var(--ease),background .3s,color .3s}
+.btn:hover{transform:translateY(-3px)}
+.btn-fill{background:var(--acc);color:#0a0a0a;clip-path:polygon(0 0,100% 0,100% 68%,calc(100% - 12px) 100%,0 100%)}.btn-fill:hover{background:var(--acc2)}
+.btn-line{border:1px solid var(--line);color:var(--ink);background:transparent}.btn-line:hover{border-color:var(--acc);color:var(--acc)}
+.btn svg{width:14px;height:14px}
+.hero-stats{display:flex;gap:42px;flex-wrap:wrap}
+.hero-stats .s b{font-family:var(--sans);font-weight:800;font-size:clamp(1.4rem,2.4vw,2.1rem);display:block;letter-spacing:-.02em}
+.hero-stats .s span{font-family:var(--mono);font-size:.58rem;letter-spacing:.16em;color:var(--steel);text-transform:uppercase}
+.scrollcue{position:absolute;bottom:26px;right:40px;z-index:2;font-family:var(--mono);font-size:.58rem;letter-spacing:.22em;color:var(--steel);display:flex;align-items:center;gap:10px}
+.scrollcue i{width:34px;height:1px;background:var(--steel);position:relative;overflow:hidden}
+.scrollcue i::after{content:"";position:absolute;inset:0;background:var(--acc);animation:slide 2s var(--ease) infinite}
+@keyframes slide{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:20px 0;background:var(--bg)}
+.marquee .tk{display:inline-flex;animation:mq 34s linear infinite}
+.marquee span{font-weight:800;font-size:1.6rem;letter-spacing:-.01em;text-transform:uppercase;padding:0 26px;color:var(--steel-d)}
+.marquee span.hl{color:var(--ink)}.marquee span .dot{color:var(--acc)}
+@keyframes mq{to{transform:translateX(-50%)}}
+.rv{opacity:0;transform:translateY(40px);transition:opacity 1s var(--ease),transform 1.1s var(--ease)}.rv.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+.sec{padding:clamp(80px,12vh,170px) 0;position:relative}
+.sec-num{font-family:var(--mono);font-size:.62rem;letter-spacing:.24em;color:var(--acc);text-transform:uppercase;display:flex;align-items:center;gap:12px;margin-bottom:26px}
+.sec-num::before{content:"";width:40px;height:1px;background:var(--acc)}
+.sec-h{font-size:clamp(2.2rem,6vw,5rem);font-weight:900;letter-spacing:-.03em;max-width:18ch}
+.manifesto .big{font-size:clamp(1.8rem,4.4vw,3.6rem);font-weight:800;letter-spacing:-.02em;line-height:1.06;max-width:26ch;text-transform:none}
+.manifesto .big .mut{color:var(--steel-d)}.manifesto .big em{font-style:normal;color:var(--acc)}
+.man-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;margin-top:60px}
+.man-grid p{color:var(--fog);max-width:46ch}
+.counters{display:flex;gap:50px;flex-wrap:wrap}
+.counters .c b{font-family:var(--sans);font-weight:900;font-size:clamp(2.4rem,5vw,4rem);display:block;letter-spacing:-.03em}
+.counters .c span{font-family:var(--mono);font-size:.6rem;letter-spacing:.16em;color:var(--steel);text-transform:uppercase}
+.prod{background:var(--bg2)}
+.prow{display:grid;grid-template-columns:90px 1.1fr 1fr;gap:30px;align-items:center;padding:46px 0;border-top:1px solid var(--line);transition:background .4s}
+.prow:last-child{border-bottom:1px solid var(--line)}.prow:hover{background:rgba(255,255,255,.02)}
+.prow .pn{font-family:var(--mono);font-size:.8rem;color:var(--steel-d);letter-spacing:.1em}
+.prow h3{font-size:clamp(1.6rem,3.2vw,2.7rem);font-weight:800;letter-spacing:-.02em}
+.prow h3 .t{display:block;font-family:var(--mono);font-size:.6rem;letter-spacing:.22em;color:var(--acc);font-weight:500;margin-bottom:12px}
+.prow .meta{display:flex;flex-direction:column;gap:16px}
+.prow .desc{color:var(--fog);font-size:.96rem;max-width:42ch}
+.diam-line{display:flex;flex-wrap:wrap;gap:6px}.diam-line span{font-family:var(--mono);font-size:.66rem;padding:5px 8px;border:1px solid var(--line);color:var(--fog)}
+.prow .pr{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.prow .pr .price b{font-family:var(--sans);font-weight:800;font-size:1.9rem;display:block;letter-spacing:-.02em}
+.prow .pr .price span{font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;color:var(--steel);text-transform:uppercase}
+.prow .pr .from{font-family:var(--mono);font-size:.56rem;letter-spacing:.2em;color:var(--acc);text-transform:uppercase}
+.lnk{font-family:var(--mono);font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);display:inline-flex;align-items:center;gap:8px;cursor:pointer;border-bottom:1px solid var(--acc);padding-bottom:3px;transition:gap .3s var(--ease)}.lnk:hover{gap:14px}
+.story{position:relative;overflow:hidden;background:#000}
+.story .vid{position:absolute;inset:0;z-index:0}.story video{width:100%;height:100%;object-fit:cover;opacity:.3}
+.story .vid::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,7,8,.95),rgba(7,7,8,.45) 70%,rgba(7,7,8,.8))}
+.story-inner{position:relative;z-index:2}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:64px;background:var(--line)}
+.step{background:var(--bg);padding:28px 24px;transition:background .4s}.step:hover{background:var(--bg3)}
+.step .n{font-family:var(--mono);font-size:.7rem;color:var(--acc);letter-spacing:.12em}
+.step h4{font-size:1.2rem;font-weight:800;margin:16px 0 10px;text-transform:none;letter-spacing:-.01em}
+.step p{font-size:.9rem;color:var(--steel)}
+.quote{background:var(--bg)}
+.terminal{border:1px solid var(--line);background:linear-gradient(180deg,var(--bg3),var(--bg2));margin-top:54px;display:grid;grid-template-columns:1.15fr .85fr}
+.term-head{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;padding:14px 24px;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;color:var(--steel);text-transform:uppercase}
+.term-head .dots{display:flex;gap:7px}.term-head .dots i{width:9px;height:9px;border:1px solid var(--steel-d);display:block}.term-head .dots i:first-child{background:var(--acc);border-color:var(--acc)}
+.config{padding:34px;border-right:1px solid var(--line)}
+.fld{margin-bottom:26px}.fld>label{display:block;font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--steel);margin-bottom:13px}.fld>label b{color:var(--acc)}
+.seg{display:flex;border:1px solid var(--line)}
+.seg button{flex:1;padding:16px 14px;background:transparent;border:0;border-right:1px solid var(--line);color:var(--fog);cursor:pointer;text-align:left;transition:.25s;font-family:var(--sans)}.seg button:last-child{border-right:0}
+.seg button b{display:block;font-weight:700;font-size:.92rem;letter-spacing:-.01em}.seg button small{font-family:var(--mono);font-size:.56rem;letter-spacing:.08em;color:var(--steel);display:block;margin-top:5px}
+.seg button.active{background:var(--acc);color:#0a0a0a}.seg button.active small{color:#2a3608}
+.diam{display:flex;flex-wrap:wrap;gap:7px}
+.diam button{min-width:54px;padding:12px 0;flex:1;border:1px solid var(--line);background:transparent;color:var(--fog);cursor:pointer;font-family:var(--mono);font-size:.78rem;transition:.2s}.diam button.active{background:var(--ink);color:#0a0a0a;border-color:var(--ink)}.diam button:disabled{opacity:.25;cursor:not-allowed}
+.qty{display:flex;align-items:center;gap:16px}.qty input[type=range]{flex:1;accent-color:var(--acc);height:3px}
+.qbox{display:flex;align-items:stretch;border:1px solid var(--line)}.qbox input{width:80px;border:0;background:transparent;color:var(--ink);padding:12px;font-family:var(--mono);font-size:1rem;font-weight:700;text-align:center}.qbox span{display:flex;align-items:center;padding:0 12px;font-family:var(--mono);font-size:.58rem;letter-spacing:.12em;color:var(--steel);background:rgba(255,255,255,.03);text-transform:uppercase}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.config input[type=text],.config input[type=tel],.config textarea{width:100%;border:1px solid var(--line);background:rgba(0,0,0,.25);color:var(--ink);padding:13px;font-family:var(--sans);font-size:.92rem}.config textarea{min-height:70px;resize:vertical}.config input::placeholder,.config textarea::placeholder{color:var(--steel-d)}.config input:focus,.config textarea:focus{outline:0;border-color:var(--acc)}
+.readout{padding:34px;display:flex;flex-direction:column}
+.readout .lbl{font-family:var(--mono);font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--acc)}
+.readout .big{font-family:var(--sans);font-weight:900;font-size:clamp(2.4rem,4.6vw,3.4rem);letter-spacing:-.03em;line-height:1;margin:10px 0 4px}
+.readout .sub{font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;color:var(--steel);text-transform:uppercase}
+.recap{margin:26px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 0;display:flex;flex-direction:column;gap:12px}
+.recap .r{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.72rem;letter-spacing:.04em}.recap .r span{color:var(--steel);text-transform:uppercase}.recap .r b{color:var(--ink)}
+.acts{display:flex;flex-direction:column;gap:10px;margin-top:auto}.acts .btn{justify-content:center;width:100%}
+.btn-wa{background:#1faf54;color:#fff;clip-path:polygon(0 0,100% 0,100% 68%,calc(100% - 12px) 100%,0 100%)}.btn-wa:hover{background:#23c460}
+.readout .note{font-family:var(--mono);font-size:.54rem;letter-spacing:.06em;line-height:1.7;color:var(--steel-d);margin-top:16px;text-transform:uppercase}
+.gal{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:150px;gap:10px;margin-top:54px}
+.gal figure{position:relative;overflow:hidden;background:#000}
+.gal figure img,.gal figure video{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.gal figure:hover img{transform:scale(1.06)}
+.gal figcaption{position:absolute;left:0;bottom:0;padding:14px;font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.75));width:100%}
+.g1{grid-column:span 7;grid-row:span 3}.g2{grid-column:span 5;grid-row:span 2}.g3{grid-column:span 5;grid-row:span 1}.g4{grid-column:span 4;grid-row:span 2}.g5{grid-column:span 4;grid-row:span 2}.g6{grid-column:span 4;grid-row:span 2}
+.why{background:var(--bg2)}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);margin-top:54px;border:1px solid var(--line)}
+.why .it{background:var(--bg);padding:34px 28px;transition:background .4s}.why .it:hover{background:var(--bg3)}
+.why .it .n{font-family:var(--mono);font-size:.6rem;color:var(--acc);letter-spacing:.2em}
+.why .it h4{font-size:1.2rem;font-weight:800;margin:18px 0 10px;text-transform:none;letter-spacing:-.01em}
+.why .it p{font-size:.9rem;color:var(--steel)}
+.contact{background:var(--bg)}
+.c-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:64px;align-items:start;margin-top:50px}
+.c-big{font-size:clamp(2.6rem,7vw,6rem);font-weight:900;letter-spacing:-.03em;line-height:.94}.c-big em{font-style:normal;color:var(--acc)}
+.cinfo{margin-top:40px;display:flex;flex-direction:column}
+.cinfo a,.cinfo div.row{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:20px 0;border-top:1px solid var(--line)}
+.cinfo .k{font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;color:var(--steel);text-transform:uppercase}
+.cinfo .v{font-family:var(--sans);font-weight:600;font-size:1.05rem}.cinfo a:hover .v{color:var(--acc)}
+.c-card{border:1px solid var(--line);padding:34px;background:var(--bg2)}
+.c-card h3{font-size:1.5rem;font-weight:800;text-transform:none;letter-spacing:-.01em;margin-bottom:8px}
+.c-card .ag{font-family:var(--mono);font-size:.6rem;letter-spacing:.16em;color:var(--acc);text-transform:uppercase;margin-bottom:18px}
+.c-card p{color:var(--steel);font-size:.92rem;margin-bottom:22px}
+.c-card .btn{width:100%;justify-content:center;margin-bottom:10px}
+footer .ft{margin-top:90px;padding:34px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;color:var(--steel);text-transform:uppercase}
+.wa{position:fixed;right:26px;bottom:26px;z-index:85;width:56px;height:56px;background:#1faf54;display:flex;align-items:center;justify-content:center;clip-path:polygon(0 0,100% 0,100% 78%,82% 100%,0 100%)}.wa svg{width:28px;height:28px;fill:#fff}
+.toast{position:fixed;left:50%;bottom:30px;transform:translateX(-50%) translateY(160%);z-index:95;background:var(--ink);color:var(--bg);padding:14px 24px;font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;transition:transform .5s var(--ease)}.toast.show{transform:translateX(-50%) translateY(0)}
+.gal figure{cursor:pointer;clip-path:inset(0 100% 0 0);transition:clip-path 1.1s var(--ease)}
+.gal figure.shown{clip-path:inset(0 0 0 0)}
+#lb{position:fixed;inset:0;z-index:200;background:rgba(5,6,8,.95);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;opacity:0;transition:opacity .4s}
+#lb.open{display:flex;opacity:1}
+#lb .media img,#lb .media video{max-width:90vw;max-height:84vh;display:block;border:1px solid var(--line)}
+#lb .cap{position:absolute;bottom:28px;left:0;right:0;text-align:center;font-family:var(--mono);font-size:.64rem;letter-spacing:.16em;color:var(--fog);text-transform:uppercase}
+#lb button{background:none;border:1px solid var(--line);color:#fff;cursor:pointer;transition:.25s;font-family:var(--mono)}
+#lb button:hover{border-color:var(--acc);color:var(--acc)}
+#lb .x{position:absolute;top:22px;right:28px;width:46px;height:46px;font-size:1rem}
+#lb .nav{position:absolute;top:50%;transform:translateY(-50%);width:50px;height:50px;font-size:1.5rem}
+#lb .prev{left:24px}#lb .next{right:24px}
+@media(max-width:760px){#lb .nav{width:42px;height:42px}}
+.g7{grid-column:span 12;grid-row:span 2}
+.statband{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.statband .sb{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line)}
+.statband .st{background:var(--bg);padding:clamp(40px,6vw,68px) 30px}
+.statband .st b{font-family:var(--sans);font-weight:900;font-size:clamp(2.6rem,5.2vw,4.6rem);letter-spacing:-.03em;display:block;line-height:1;white-space:nowrap}
+.statband .st b .u{color:var(--acc)}
+.statband .st span{font-family:var(--mono);font-size:.6rem;letter-spacing:.16em;color:var(--steel);text-transform:uppercase;margin-top:14px;display:block}
+html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!important}.lenis.lenis-stopped{overflow:hidden}
+@media(max-width:760px){.statband .sb{grid-template-columns:1fr 1fr}}
+@media(max-width:1024px){.idx{display:none}.man-grid,.c-grid{grid-template-columns:1fr;gap:40px}.terminal{grid-template-columns:1fr}.config{border-right:0;border-bottom:1px solid var(--line)}.steps,.why-grid{grid-template-columns:1fr 1fr}.prow{grid-template-columns:60px 1fr;gap:18px}.prow .meta{grid-column:1/-1}}
+@media(max-width:760px){.wrap{padding:0 22px}.nav-links{display:none}.burger{display:flex}.nav-links.open{display:flex;position:fixed;inset:64px 16px auto 16px;flex-direction:column;background:var(--bg2);border:1px solid var(--line);padding:8px}.nav-links.open a{padding:16px;border-bottom:1px solid var(--line-2)}.chip{display:none}.gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:120px}.g1,.g2,.g3,.g4,.g5,.g6{grid-column:span 2;grid-row:span 2}.steps,.why-grid{grid-template-columns:1fr}.grid2{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.001s!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body class="loading">
+<div class="cursor"></div><div class="cursor-dot"></div>
+
+<div id="preloader">
+  <div class="pl-logo"><svg viewBox="0 0 120 120"><path d="M46 28 H92 V92 H44 M44 28 V74" fill="none" stroke="#9aa0a6" stroke-width="3"/><rect x="64" y="44" width="8" height="32" fill="#b2d63b"/><rect x="57" y="44" width="22" height="5" fill="#b2d63b"/><rect x="57" y="71" width="22" height="5" fill="#b2d63b"/></svg></div>
+  <div class="pl-bar" id="plBar"></div>
+  <div class="pl-meta"><span data-fr="Forgeage" data-en="Forging">Forgeage</span><span id="plPct">0%</span></div>
+</div>
+
+<div class="hud" aria-hidden="true">
+  <div class="edge t"></div><div class="edge b"></div><div class="edge l"></div><div class="edge r"></div>
+  <div class="cn tl"></div><div class="cn tr"></div><div class="cn bl"></div><div class="cn br"></div>
+  <div class="tag lft">14.69°N · 17.45°W — DAKAR / SN</div>
+  <div class="tag rgt">INTERNATIONAL & REGIONAL AFRICAN METAL</div>
+</div>
+<div class="grain" aria-hidden="true"></div>
+
+<header id="header"><div class="wrap nav">
+  <a href="#top" class="brand" data-cursor aria-label="IRAM International">
+    <svg class="mk" viewBox="0 0 120 120"><path d="M46 28 H92 V92 H44 M44 28 V74" fill="none" stroke="#9aa0a6" stroke-width="3"/><rect x="64" y="44" width="8" height="32" fill="#b2d63b"/><rect x="57" y="44" width="22" height="5" fill="#b2d63b"/><rect x="57" y="71" width="22" height="5" fill="#b2d63b"/></svg>
+    <span><b>IRAM</b><small>THE METAL CITY</small></span>
+  </a>
+  <nav class="nav-links" id="menu">
+    <a href="#manifesto" data-fr="Maison" data-en="House">Maison</a>
+    <a href="#products" data-fr="Produits" data-en="Products">Produits</a>
+    <a href="#quote" data-fr="Devis" data-en="Quote">Devis</a>
+    <a href="#gallery" data-fr="Terrain" data-en="Field">Terrain</a>
+    <a href="#contact" data-fr="Contact" data-en="Contact">Contact</a>
+  </nav>
+  <div class="nav-right">
+    <div class="lang"><button data-lang="fr" class="active">FR</button><button data-lang="en">EN</button></div>
+    <a href="#quote" class="chip" data-cursor><span data-fr="Devis gratuit" data-en="Free quote">Devis gratuit</span></a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</div></header>
+
+<section class="hero" id="top">
+  <div class="hero-bg"><img src="hero-welder.jpg" alt="Soudure d'acier — IRAM" /></div>
+  <canvas id="stage"></canvas>
+  <div class="hero-watermark" aria-hidden="true">IRAM</div>
+  <div class="idx">
+    <a href="#manifesto" class="act"><span class="b"></span><span data-fr="01 — Maison" data-en="01 — House">01 — Maison</span></a>
+    <a href="#products"><span class="b"></span><span data-fr="02 — Acier" data-en="02 — Steel">02 — Acier</span></a>
+    <a href="#story"><span class="b"></span><span data-fr="03 — Import" data-en="03 — Import">03 — Import</span></a>
+    <a href="#quote"><span class="b"></span><span data-fr="04 — Devis" data-en="04 — Quote">04 — Devis</span></a>
+    <a href="#contact"><span class="b"></span><span data-fr="05 — Contact" data-en="05 — Contact">05 — Contact</span></a>
+  </div>
+  <div class="wrap hero-inner">
+    <div class="mono acc rv" style="margin-bottom:24px" data-fr="Matériaux de construction premium · Sénégal" data-en="Premium construction materials · Senegal">Matériaux de construction premium · Sénégal</div>
+    <h1>
+      <span class="ln"><span class="scramble" data-fr="Nous forgeons" data-en="We forge">Nous forgeons</span></span>
+      <span class="ln"><em class="scramble" data-fr="l'avenir." data-en="the future.">l'avenir.</em></span>
+    </h1>
+    <p class="lede rv d2" data-fr="IRAM International — l'acier qui tient debout les villes du Sénégal. Fer à béton local et FE 500 importé, béton prêt à l'emploi et matériaux haut de gamme, sélectionnés sans compromis et livrés au pied de votre coffrage." data-en="IRAM International — the steel that holds Senegal's cities upright. Local rebar and imported FE 500, ready-mix concrete and premium materials, selected without compromise and delivered to the foot of your formwork.">IRAM International — l'acier qui tient debout les villes du Sénégal. Fer à béton local et FE 500 importé, béton prêt à l'emploi et matériaux haut de gamme, sélectionnés sans compromis et livrés au pied de votre coffrage.</p>
+    <div class="hero-row rv d3">
+      <div class="hero-cta">
+        <a href="#quote" class="btn btn-fill" data-cursor><span data-fr="Demander un devis" data-en="Request a quote">Demander un devis</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="#products" class="btn btn-line" data-cursor><span data-fr="Voir l'acier" data-en="See the steel">Voir l'acier</span></a>
+      </div>
+      <div class="hero-stats">
+        <div class="s"><b>10+</b><span data-fr="Ans" data-en="Years">Ans</span></div>
+        <div class="s"><b>Ø6–32</b><span data-fr="Diamètres" data-en="Diameters">Diamètres</span></div>
+        <div class="s"><b>FE 500</b><span data-fr="Import" data-en="Import">Import</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="scrollcue"><span data-fr="Défiler" data-en="Scroll">Défiler</span><i></i></div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="tk" id="tk">
+  <span class="hl">FER À BÉTON<span class="dot"> ◆ </span></span><span>FE 500<span class="dot"> ◆ </span></span><span class="hl">Ø6 — Ø32<span class="dot"> ◆ </span></span><span>LOCAL & IMPORT<span class="dot"> ◆ </span></span><span class="hl">QUALITÉ SANS COMPROMIS<span class="dot"> ◆ </span></span><span>DAKAR<span class="dot"> ◆ </span></span><span class="hl">THE METAL CITY<span class="dot"> ◆ </span></span>
+  <span class="hl">FER À BÉTON<span class="dot"> ◆ </span></span><span>FE 500<span class="dot"> ◆ </span></span><span class="hl">Ø6 — Ø32<span class="dot"> ◆ </span></span><span>LOCAL & IMPORT<span class="dot"> ◆ </span></span><span class="hl">QUALITÉ SANS COMPROMIS<span class="dot"> ◆ </span></span><span>DAKAR<span class="dot"> ◆ </span></span><span class="hl">THE METAL CITY<span class="dot"> ◆ </span></span>
+</div></div>
+
+<section class="sec manifesto" id="manifesto">
+  <div class="wrap">
+    <div class="sec-num rv"><span data-fr="01 / La maison" data-en="01 / The house">01 / La maison</span></div>
+    <p class="big rv d1" data-fr="<em>International and Regional African Metal.</em> Une équipe d'ingénieurs et de techniciens qui réinvente le matériau de construction en Afrique — <span class='mut'>la qualité sans compromis, le service sur mesure.</span>" data-en="<em>International and Regional African Metal.</em> A team of engineers and technicians reinventing construction materials in Africa — <span class='mut'>quality without compromise, service made to measure.</span>"><em>International and Regional African Metal.</em> Une équipe d'ingénieurs et de techniciens qui réinvente le matériau de construction en Afrique — <span class='mut'>la qualité sans compromis, le service sur mesure.</span></p>
+    <div class="man-grid">
+      <p class="rv d2" data-fr="Là où les grandes chaînes vendent du volume, IRAM cultive la proximité : une petite équipe d'experts, une sélection rigoureuse, et un accompagnement personnalisé pour les bâtisseurs les plus exigeants d'une Afrique en pleine construction." data-en="Where big chains sell volume, IRAM cultivates closeness: a small team of experts, a rigorous selection, and personalised guidance for the most demanding builders of an Africa under construction.">Là où les grandes chaînes vendent du volume, IRAM cultive la proximité : une petite équipe d'experts, une sélection rigoureuse, et un accompagnement personnalisé pour les bâtisseurs les plus exigeants d'une Afrique en pleine construction.</p>
+      <div class="counters rv d3">
+        <div class="c"><b data-count="10" data-suffix="+">0</b><span data-fr="Ans d'expertise" data-en="Years of expertise">Ans d'expertise</span></div>
+        <div class="c"><b data-count="5">0</b><span data-fr="Experts dédiés" data-en="Dedicated experts">Experts dédiés</span></div>
+        <div class="c"><b data-count="100" data-suffix="%">0</b><span data-fr="Qualité sélectionnée" data-en="Selected quality">Qualité sélectionnée</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec prod" id="products">
+  <div class="wrap">
+    <div class="sec-num rv"><span data-fr="02 / Catalogue acier" data-en="02 / Steel catalogue">02 / Catalogue acier</span></div>
+    <h2 class="sec-h rv d1" data-fr="Du fer pour chaque ouvrage." data-en="Steel for every structure.">Du fer pour chaque ouvrage.</h2>
+    <div class="prows">
+      <div class="prow rv">
+        <div class="pn">01</div>
+        <h3><span class="t" data-fr="Production locale" data-en="Local production">Production locale</span><span data-fr="Fer à béton local" data-en="Local rebar">Fer à béton local</span></h3>
+        <div class="meta">
+          <p class="desc" data-fr="Fabriqué localement. Structures courantes, dalles et travaux résidentiels." data-en="Locally produced. Standard structures, slabs and residential works.">Fabriqué localement. Structures courantes, dalles et travaux résidentiels.</p>
+          <div class="diam-line"><span>Ø6</span><span>Ø8</span><span>Ø10</span><span>Ø12</span></div>
+          <div class="pr"><div class="price"><span class="from" data-fr="À partir de" data-en="From">À partir de</span><b>390 000 F</b><span data-fr="/ tonne · CFA" data-en="/ tonne · CFA">/ tonne · CFA</span></div><span class="lnk" data-prefill="local" data-cursor><span data-fr="Configurer" data-en="Configure">Configurer</span> →</span></div>
+        </div>
+      </div>
+      <div class="prow rv">
+        <div class="pn">02</div>
+        <h3><span class="t" data-fr="Import · Haute résistance" data-en="Import · High strength">Import · Haute résistance</span><span data-fr="Fer importé FE 500" data-en="Imported FE 500">Fer importé FE 500</span></h3>
+        <div class="meta">
+          <p class="desc" data-fr="Acier à haute limite d'élasticité, importé par voie maritime. Ouvrages exigeants, immeubles, grandes structures." data-en="High-yield steel, imported by sea. Demanding works, buildings, major structures.">Acier à haute limite d'élasticité, importé par voie maritime. Ouvrages exigeants, immeubles, grandes structures.</p>
+          <div class="diam-line"><span>Ø8</span><span>Ø10</span><span>Ø12</span><span>Ø14</span><span>Ø16</span><span>Ø20</span><span>Ø25</span><span>Ø32</span></div>
+          <div class="pr"><div class="price"><span class="from" data-fr="À partir de" data-en="From">À partir de</span><b>550 000 F</b><span data-fr="/ tonne · CFA" data-en="/ tonne · CFA">/ tonne · CFA</span></div><span class="lnk" data-prefill="import" data-cursor><span data-fr="Configurer" data-en="Configure">Configurer</span> →</span></div>
+        </div>
+      </div>
+      <div class="prow rv">
+        <div class="pn">03</div>
+        <h3><span class="t" data-fr="Livré & coulé" data-en="Delivered & poured">Livré & coulé</span><span data-fr="Béton prêt à l'emploi" data-en="Ready-mix concrete">Béton prêt à l'emploi</span></h3>
+        <div class="meta">
+          <p class="desc" data-fr="Béton dosé, livré et coulé sur votre chantier. Volume et résistance sur mesure." data-en="Dosed concrete, delivered and poured on site. Custom volume and strength.">Béton dosé, livré et coulé sur votre chantier. Volume et résistance sur mesure.</p>
+          <div class="pr"><div class="price"><span class="from" data-fr="Tarification" data-en="Pricing">Tarification</span><b data-fr="Sur devis" data-en="On quote">Sur devis</b><span data-fr="volume estimé en m³" data-en="estimated volume in m³">volume estimé en m³</span></div><span class="lnk" data-prefill="beton" data-cursor><span data-fr="Demander" data-en="Request">Demander</span> →</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec story" id="story">
+  <div class="vid"><video src="clip-import.mp4" poster="clip-import-poster.jpg" autoplay muted loop playsinline></video></div>
+  <div class="wrap story-inner">
+    <div class="sec-num rv"><span data-fr="03 / Chaîne d'approvisionnement" data-en="03 / Supply chain">03 / Chaîne d'approvisionnement</span></div>
+    <h2 class="sec-h rv d1" data-fr="Du port de Dakar à votre chantier." data-en="From the port of Dakar to your site.">Du port de Dakar à votre chantier.</h2>
+    <p class="rv d2" style="color:var(--fog);max-width:54ch;margin-top:24px" data-fr="Nous maîtrisons chaque maillon — du sourcing international au déchargement portuaire, jusqu'à la livraison au pied de votre coffrage." data-en="We master every link — from international sourcing to port unloading, all the way to delivery at the foot of your formwork.">Nous maîtrisons chaque maillon — du sourcing international au déchargement portuaire, jusqu'à la livraison au pied de votre coffrage.</p>
+    <div class="steps">
+      <div class="step rv"><div class="n">01</div><h4 data-fr="Sourcing" data-en="Sourcing">Sourcing</h4><p data-fr="Aciéries fiables, certifiées FE 500." data-en="Reliable mills, certified FE 500.">Aciéries fiables, certifiées FE 500.</p></div>
+      <div class="step rv d1"><div class="n">02</div><h4 data-fr="Contrôle" data-en="Control">Contrôle</h4><p data-fr="Diamètres, marquage et tonnages vérifiés." data-en="Diameters, marking and tonnage verified.">Diamètres, marquage et tonnages vérifiés.</p></div>
+      <div class="step rv d2"><div class="n">03</div><h4 data-fr="Import" data-en="Import">Import</h4><p data-fr="Acheminement et déchargement au port." data-en="Shipping and unloading at the port.">Acheminement et déchargement au port.</p></div>
+      <div class="step rv d3"><div class="n">04</div><h4 data-fr="Livraison" data-en="Delivery">Livraison</h4><p data-fr="Transport direct sur votre chantier." data-en="Direct transport to your site.">Transport direct sur votre chantier.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="statband">
+  <div class="wrap"><div class="sb">
+    <div class="st rv"><b data-count="10" data-suffix="+">0</b><span data-fr="Années d'expertise" data-en="Years of expertise">Années d'expertise</span></div>
+    <div class="st rv d1"><b data-count="5">0</b><span data-fr="Experts dédiés" data-en="Dedicated experts">Experts dédiés</span></div>
+    <div class="st rv d2"><b data-count="32">0</b><span data-fr="Ø max · diamètre (mm)" data-en="Ø max · diameter (mm)">Ø max · diamètre (mm)</span></div>
+    <div class="st rv d3"><b data-count="100" data-suffix="%">0</b><span data-fr="Acier FE 500" data-en="FE 500 steel">Acier FE 500</span></div>
+  </div></div>
+</section>
+
+<section class="sec quote" id="quote">
+  <div class="wrap">
+    <div class="sec-num rv"><span data-fr="04 / Terminal de devis" data-en="04 / Quote terminal">04 / Terminal de devis</span></div>
+    <h2 class="sec-h rv d1" data-fr="Configurez. Estimez. Commandez." data-en="Configure. Estimate. Order.">Configurez. Estimez. Commandez.</h2>
+    <div class="terminal rv d2">
+      <div class="term-head"><span>IRAM://devis — <span data-fr="estimation en direct" data-en="live estimate">estimation en direct</span></span><div class="dots"><i></i><i></i><i></i></div></div>
+      <div class="config">
+        <div class="fld"><label><b>01</b> · <span data-fr="Type de produit" data-en="Product type">Type de produit</span></label>
+          <div class="seg" id="segType">
+            <button data-type="local" class="active"><b data-fr="Fer local" data-en="Local rebar">Fer local</b><small data-fr="Ø6–12 · dès 390K F/t" data-en="Ø6–12 · from 390K F/t">Ø6–12 · dès 390K F/t</small></button>
+            <button data-type="import"><b data-fr="Importé FE 500" data-en="Imported FE 500">Importé FE 500</b><small data-fr="Ø8–32 · dès 550K F/t" data-en="Ø8–32 · from 550K F/t">Ø8–32 · dès 550K F/t</small></button>
+            <button data-type="beton"><b data-fr="Béton" data-en="Concrete">Béton</b><small data-fr="sur devis" data-en="on quote">sur devis</small></button>
+          </div></div>
+        <div class="fld" id="fldDiam"><label><b>02</b> · <span data-fr="Diamètre" data-en="Diameter">Diamètre</span></label><div class="diam" id="diam"></div></div>
+        <div class="fld" id="fldQty"><label><b>03</b> · <span data-fr="Quantité — tonnes" data-en="Quantity — tonnes">Quantité — tonnes</span></label><div class="qty"><input type="range" id="qtyRange" min="1" max="100" value="5" /><div class="qbox"><input type="text" id="qtyInput" value="5" inputmode="numeric"/><span>t</span></div></div></div>
+        <div class="fld" id="fldVol" style="display:none"><label><b>02</b> · <span data-fr="Volume estimé — m³" data-en="Estimated volume — m³">Volume estimé — m³</span></label><div class="qbox" style="max-width:160px"><input type="text" id="volInput" value="10" inputmode="numeric"/><span>m³</span></div></div>
+        <div class="grid2"><div class="fld" style="margin-bottom:14px"><label><span data-fr="Nom" data-en="Name">Nom</span></label><input type="text" id="cName" placeholder="—"/></div><div class="fld" style="margin-bottom:14px"><label><span data-fr="Téléphone" data-en="Phone">Téléphone</span></label><input type="tel" id="cPhone" placeholder="+221 …"/></div></div>
+        <div class="fld" style="margin-bottom:14px"><label><span data-fr="Ville / Chantier" data-en="City / Site">Ville / Chantier</span></label><input type="text" id="cCity" placeholder="Dakar, …"/></div>
+        <div class="fld" style="margin-bottom:0"><label><span data-fr="Message" data-en="Message">Message</span></label><textarea id="cMsg" placeholder="—"></textarea></div>
+      </div>
+      <div class="readout">
+        <div class="lbl" data-fr="Estimation indicative" data-en="Indicative estimate">Estimation indicative</div>
+        <div class="big" id="estTotal">1 950 000 F</div>
+        <div class="sub" id="estUnit" data-fr="soit 390 000 F / tonne" data-en="i.e. 390,000 F / tonne">soit 390 000 F / tonne</div>
+        <div class="recap"><div class="r"><span data-fr="Produit" data-en="Product">Produit</span><b id="rType">Fer local</b></div><div class="r" id="rDiamRow"><span data-fr="Diamètre" data-en="Diameter">Diamètre</span><b id="rDiam">Ø8</b></div><div class="r"><span data-fr="Quantité" data-en="Quantity">Quantité</span><b id="rQty">5 t</b></div></div>
+        <div class="acts">
+          <a href="#" class="btn btn-wa" id="sendWa" data-cursor><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 01-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 4.54 0 8.23 3.69 8.23 8.23 0 4.54-3.69 8.23-8.23 8.23z"/></svg><span data-fr="Envoyer via WhatsApp" data-en="Send via WhatsApp">Envoyer via WhatsApp</span></a>
+          <a href="#" class="btn btn-line" id="sendMail" data-cursor><span data-fr="Envoyer par e-mail" data-en="Send by email">Envoyer par e-mail</span></a>
+          <a href="#" class="btn btn-line" id="dlPdf" data-cursor style="border-color:var(--acc);color:var(--acc)"><span data-fr="Télécharger le devis (PDF)" data-en="Download quote (PDF)">Télécharger le devis (PDF)</span></a>
+        </div>
+        <p class="note" data-fr="Prix indicatifs hors transport. Devis final confirmé par IRAM." data-en="Indicative prices excl. transport. Final quote confirmed by IRAM.">Prix indicatifs hors transport. Devis final confirmé par IRAM.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec gallery" id="gallery" style="background:var(--bg)">
+  <div class="wrap">
+    <div class="sec-num rv"><span data-fr="05 / Sur le terrain" data-en="05 / On the ground">05 / Sur le terrain</span></div>
+    <h2 class="sec-h rv d1" data-fr="Nos chantiers, notre acier." data-en="Our sites, our steel.">Nos chantiers, notre acier.</h2>
+    <div class="gal rv d1">
+      <figure class="g1"><video src="clip-site.mp4" poster="clip-site-poster.jpg" autoplay muted loop playsinline></video><figcaption data-fr="Chantier actif · Sénégal" data-en="Active site · Senegal">Chantier actif · Sénégal</figcaption></figure>
+      <figure class="g2"><img src="ph-port.jpg" alt="" /><figcaption data-fr="Import · Port Autonome de Dakar" data-en="Import · Port of Dakar">Import · Port Autonome de Dakar</figcaption></figure>
+      <figure class="g3"><img src="ph-pump.jpg" alt="" /><figcaption data-fr="Pompe à béton" data-en="Concrete pump">Pompe à béton</figcaption></figure>
+      <figure class="g4"><img src="ph-rebar-stock.jpg" alt="" /><figcaption data-fr="Stock d'acier FE 500" data-en="FE 500 steel stock">Stock d'acier FE 500</figcaption></figure>
+      <figure class="g5"><img src="ph-rebar-truck.jpg" alt="" /><figcaption data-fr="Livraison fer · chantier" data-en="Rebar delivery · site">Livraison fer · chantier</figcaption></figure>
+      <figure class="g6"><img src="ph-cement.jpg" alt="" /><figcaption data-fr="Ciment & matériaux" data-en="Cement & materials">Ciment & matériaux</figcaption></figure>
+      <figure class="g7"><img src="ph-fab.jpg" alt="" /><figcaption data-fr="Atelier · Fabrication & soudure acier" data-en="Workshop · Steel fabrication & welding">Atelier · Fabrication & soudure acier</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec why" id="why">
+  <div class="wrap">
+    <div class="sec-num rv"><span data-fr="06 / Pourquoi IRAM" data-en="06 / Why IRAM">06 / Pourquoi IRAM</span></div>
+    <h2 class="sec-h rv d1" data-fr="Un partenaire, pas un fournisseur." data-en="A partner, not a supplier.">Un partenaire, pas un fournisseur.</h2>
+    <div class="why-grid">
+      <div class="it rv"><div class="n">/ 01</div><h4 data-fr="Qualité sans compromis" data-en="No-compromise quality">Qualité sans compromis</h4><p data-fr="Acier FE 500 contrôlé, diamètres conformes, marquage vérifié." data-en="Controlled FE 500 steel, compliant diameters, verified marking.">Acier FE 500 contrôlé, diamètres conformes, marquage vérifié.</p></div>
+      <div class="it rv d1"><div class="n">/ 02</div><h4 data-fr="Service sur mesure" data-en="Tailored service">Service sur mesure</h4><p data-fr="Une petite équipe d'experts, une attention personnalisée à chaque client." data-en="A small team of experts, personalised attention for every client.">Une petite équipe d'experts, une attention personnalisée à chaque client.</p></div>
+      <div class="it rv d2"><div class="n">/ 03</div><h4 data-fr="Livraison rapide" data-en="Fast delivery">Livraison rapide</h4><p data-fr="Logistique maîtrisée, du port au pied de votre coffrage." data-en="Controlled logistics, from port to formwork.">Logistique maîtrisée, du port au pied de votre coffrage.</p></div>
+      <div class="it rv d3"><div class="n">/ 04</div><h4 data-fr="Conseil technique" data-en="Technical advice">Conseil technique</h4><p data-fr="Des ingénieurs pour choisir le bon acier au bon endroit." data-en="Engineers to choose the right steel in the right place.">Des ingénieurs pour choisir le bon acier au bon endroit.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec contact" id="contact">
+  <div class="wrap">
+    <div class="sec-num rv"><span data-fr="07 / Contact" data-en="07 / Contact">07 / Contact</span></div>
+    <div class="c-grid">
+      <div>
+        <h2 class="c-big rv d1" data-fr="Parlons de votre <em>chantier.</em>" data-en="Let's talk about your <em>site.</em>">Parlons de votre <em>chantier.</em></h2>
+        <div class="cinfo rv d2">
+          <a id="ciWa" href="#" target="_blank" rel="noopener" data-cursor><span class="k">WhatsApp · Sénégal</span><span class="v" id="ciWaTxt">+221 77 885 53 66</span></a>
+          <a id="ciPhone2" href="tel:+34699563948" data-cursor><span class="k">Tél · Europe</span><span class="v">+34 699 56 39 48</span></a>
+          <a id="ciMail" href="#" data-cursor><span class="k">E-mail</span><span class="v" id="ciMailTxt">IramInternationalsn@gmail.com</span></a>
+          <a id="ciSite" href="https://www.iraminternational.com" target="_blank" rel="noopener" data-cursor><span class="k">Site</span><span class="v">www.iraminternational.com</span></a>
+          <div class="row"><span class="k" data-fr="Localisation" data-en="Location">Localisation</span><span class="v">Dakar, Sénégal</span></div>
+        </div>
+      </div>
+      <div class="c-card rv d2">
+        <h3 data-fr="Devis en 2 minutes" data-en="Quote in 2 minutes">Devis en 2 minutes</h3>
+        <div class="ag">Aida Diagne — <span data-fr="Agent Commercial" data-en="Sales Agent">Agent Commercial</span></div>
+        <p data-fr="Configurateur en direct, ou écrivez-nous directement." data-en="Live configurator, or message us directly.">Configurateur en direct, ou écrivez-nous directement.</p>
+        <a href="#quote" class="btn btn-fill" data-cursor><span data-fr="Ouvrir le terminal" data-en="Open the terminal">Ouvrir le terminal</span></a>
+        <a href="#" class="btn btn-wa" id="ctaWa" data-cursor><span data-fr="Écrire sur WhatsApp" data-en="Message on WhatsApp">Écrire sur WhatsApp</span></a>
+      </div>
+    </div>
+    <footer><div class="ft">
+      <span>IRAM INTERNATIONAL — INTERNATIONAL & REGIONAL AFRICAN METAL</span>
+      <span data-fr="© 2026 · Fer & matériaux · Sénégal" data-en="© 2026 · Steel & materials · Senegal">© 2026 · Fer & matériaux · Sénégal</span>
+    </div></footer>
+  </div>
+</section>
+
+<a class="wa" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2z"/></svg></a>
+<div id="lb" aria-hidden="true"><button class="x" id="lbX" aria-label="Fermer">✕</button><button class="nav prev" id="lbP" aria-label="Précédent">‹</button><button class="nav next" id="lbN" aria-label="Suivant">›</button><div class="media" id="lbMedia"></div><div class="cap" id="lbCap"></div></div>
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+ const cv=document.getElementById('stage');if(!cv)return;const x=cv.getContext('2d');let w,h,ps=[];
+ function rs(){w=cv.width=cv.offsetWidth;h=cv.height=cv.offsetHeight;}
+ function spawn(fromBottom){return{x:Math.random()*w,y:fromBottom?h+Math.random()*30:Math.random()*h,vy:-(Math.random()*1.0+0.35),vx:(Math.random()-.5)*0.45,r:Math.random()*2.1+0.5,a:Math.random()*0.55+0.18,g:Math.random()<0.28};}
+ function init(){ps=Array.from({length:Math.min(130,Math.floor(w/11))},()=>spawn(false));}
+ function loop(){x.clearRect(0,0,w,h);x.globalCompositeOperation='lighter';
+   for(const p of ps){p.y+=p.vy;p.x+=p.vx;p.vx+=(Math.random()-.5)*0.02;p.a*=0.9955;
+     if(p.y<-12||p.a<0.02){Object.assign(p,spawn(true));}
+     const col=p.g?'178,214,59':'255,150,60';
+     x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fillStyle='rgba('+col+','+p.a+')';x.fill();}
+   x.globalCompositeOperation='source-over';requestAnimationFrame(loop);}
+ rs();init();loop();addEventListener('resize',()=>{rs();init();});
+})();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+<script>
+const IRAM={whatsapp:"221778855366",phone:"+221 77 885 53 66",phone2:"+34 699 56 39 48",email:"IramInternationalsn@gmail.com",site:"www.iraminternational.com",whatsappDisplay:"+221 77 885 53 66"};
+const PRICES={local:390000,import:550000};
+const DIAMS={local:[6,8,10,12],import:[8,10,12,14,16,20,25,32]};
+const L={
+ fr:{tonnes:"t",from:"soit",perT:"F / tonne",onQuote:"Sur devis",subj:"Demande de devis — IRAM International",product:"Produit",diam:"Diamètre",qty:"Quantité",beton:"Béton prêt à l'emploi",local:"Fer local",import:"Fer importé FE 500",sent:"Ouverture de WhatsApp…",mail:"Ouverture de la messagerie…"},
+ en:{tonnes:"t",from:"i.e.",perT:"F / tonne",onQuote:"On quote",subj:"Quote request — IRAM International",product:"Product",diam:"Diameter",qty:"Quantity",beton:"Ready-mix concrete",local:"Local rebar",import:"Imported FE 500 rebar",sent:"Opening WhatsApp…",mail:"Opening mail app…"}};
+let lang=localStorage.getItem('iram-lang')||'fr';
+const state={type:'local',diam:8,qty:5,vol:10};
+const $=s=>document.querySelector(s);
+const fmt=n=>new Intl.NumberFormat('fr-FR').format(Math.round(n)).replace(/ /g,' ');
+
+(function(){const bar=$('#plBar'),pct=$('#plPct');for(let i=0;i<13;i++){bar.appendChild(document.createElement('i'));}
+ const cells=bar.querySelectorAll('i');let p=0;
+ const t=setInterval(()=>{p+=Math.random()*9+4;if(p>=100){p=100;clearInterval(t);finish();}pct.textContent=Math.floor(p)+'%';const on=Math.round(p/100*cells.length);cells.forEach((c,i)=>c.classList.toggle('on',i<on));},110);
+ function finish(){setTimeout(()=>{$('#preloader').classList.add('done');document.body.classList.remove('loading');startHero();},420);}})();
+
+const CH="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/#@*";
+function scramble(el){clearInterval(el._sc);const final=el.textContent;const len=final.length;let frame=0;
+ el._sc=setInterval(()=>{const rev=frame/2.2;let out='';for(let i=0;i<len;i++){if(final[i]===' '){out+=' ';continue;}out+= i<rev?final[i]:CH[Math.floor(Math.random()*CH.length)];}el.textContent=out;frame++;if(rev>=len){clearInterval(el._sc);el.textContent=final;}},40);}
+function scrambleAll(root){(root||document).querySelectorAll('.scramble').forEach(scramble);}
+function startHero(){document.querySelectorAll('.hero .rv').forEach(e=>e.classList.add('in'));scrambleAll(document.querySelector('.hero'));}
+
+addEventListener('scroll',()=>$('#header').classList.toggle('scrolled',scrollY>40));
+$('#burger').addEventListener('click',()=>$('#menu').classList.toggle('open'));
+document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>$('#menu').classList.remove('open')));
+(function(){if(matchMedia('(hover:none)').matches)return;const c=$('.cursor'),d=$('.cursor-dot');let x=0,y=0,cx=0,cy=0;
+ addEventListener('mousemove',e=>{x=e.clientX;y=e.clientY;d.style.transform=`translate(${x}px,${y}px) translate(-50%,-50%)`;});
+ (function loop(){cx+=(x-cx)*.18;cy+=(y-cy)*.18;c.style.transform=`translate(${cx}px,${cy}px) translate(-50%,-50%)`;requestAnimationFrame(loop);})();
+ document.querySelectorAll('a,button,[data-cursor],.lnk,.prow').forEach(el=>{el.addEventListener('mouseenter',()=>c.classList.add('grow'));el.addEventListener('mouseleave',()=>c.classList.remove('grow'));});})();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');e.target.querySelectorAll&&e.target.querySelectorAll('.scramble').forEach(scramble);io.unobserve(e.target);}}),{threshold:.14});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const sh=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){scramble(e.target);sh.unobserve(e.target);}}),{threshold:.6});
+document.querySelectorAll('.sec-h').forEach(el=>{el.classList.add('scramble');sh.observe(el);});
+const cio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target,t=+el.dataset.count,suf=el.dataset.suffix||'';let n=0;const st=Math.max(1,Math.ceil(t/40));const iv=setInterval(()=>{n+=st;if(n>=t){n=t;clearInterval(iv);}el.textContent=n+suf;},26);cio.unobserve(el);}),{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+
+(function(){
+ if(!window.THREE)return;
+ const cv=document.getElementById('stage');let renderer;
+ try{renderer=new THREE.WebGLRenderer({canvas:cv,alpha:true,antialias:true});}catch(e){return;}
+ renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+ const scene=new THREE.Scene();
+ const cam=new THREE.PerspectiveCamera(38,1,0.1,100);cam.position.set(0,0,15);
+ const steel=new THREE.MeshStandardMaterial({color:0x9aa0a6,metalness:1,roughness:0.32});
+ const green=new THREE.MeshStandardMaterial({color:0xb2d63b,metalness:.5,roughness:.26,emissive:0x2c3c0a,emissiveIntensity:.65});
+ class Helix extends THREE.Curve{constructor(rad,turns,height,phase){super();this.rad=rad;this.turns=turns;this.height=height;this.phase=phase;}getPoint(t,target){const tg=target||new THREE.Vector3();const a=this.phase+t*this.turns*Math.PI*2;return tg.set(Math.cos(a)*this.rad,(t-0.5)*this.height,Math.sin(a)*this.rad);}}
+ const bundle=new THREE.Group();
+ const STR=9;
+ for(let i=0;i<STR;i++){const ph=i/STR*Math.PI*2;const tube=new THREE.Mesh(new THREE.TubeGeometry(new Helix(1.5,3,13,ph),120,0.27,14,false),(i%3===0)?green:steel);bundle.add(tube);}
+ bundle.add(new THREE.Mesh(new THREE.CylinderGeometry(0.34,0.34,13,18),steel));
+ bundle.rotation.z=0.2;scene.add(bundle);
+ const farr=new THREE.Group();scene.add(farr);
+ for(let i=0;i<4;i++){const len=9+Math.random()*4;const r=new THREE.Mesh(new THREE.CylinderGeometry(0.07,0.07,len,10),steel);const a=Math.random()*6.28,rad=9+Math.random()*3;r.position.set(Math.cos(a)*rad,(Math.random()-.5)*8,-7-Math.random()*5);r.rotation.z=(Math.random()-.5);r.rotation.x=(Math.random()-.5);farr.add(r);}
+ scene.add(new THREE.AmbientLight(0x4a4f55,0.85));
+ const key=new THREE.DirectionalLight(0xffffff,1.65);key.position.set(6,8,9);scene.add(key);
+ const rim=new THREE.PointLight(0xb2d63b,2.8,64);rim.position.set(-7,0,7);scene.add(rim);
+ const rim2=new THREE.PointLight(0xffffff,1.1,52);rim2.position.set(8,-3,6);scene.add(rim2);
+ const fill=new THREE.DirectionalLight(0x88aaff,0.3);fill.position.set(-5,-4,-4);scene.add(fill);
+ const cnt=140,pos=new Float32Array(cnt*3);for(let i=0;i<cnt*3;i++)pos[i]=(Math.random()-.5)*24;
+ const sg=new THREE.BufferGeometry();sg.setAttribute('position',new THREE.BufferAttribute(pos,3));
+ const sparks=new THREE.Points(sg,new THREE.PointsMaterial({color:0xb2d63b,size:0.07,transparent:true,opacity:.7}));scene.add(sparks);
+ let mx=0,my=0;addEventListener('mousemove',e=>{mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5;});
+ function resize(){const w=cv.clientWidth||innerWidth,h=cv.clientHeight||innerHeight;renderer.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix();
+   if(w<820){bundle.position.set(0,1.8,-1);bundle.scale.setScalar(.8);cam.position.set(0,0,19);}else{bundle.position.set(3.1,0,0);bundle.scale.setScalar(1);cam.position.set(0,0,16);}}
+ function loop(tm){bundle.rotation.y=tm*0.0009+mx*0.6;bundle.rotation.x=-my*0.3+Math.sin(tm*0.00025)*0.05;farr.rotation.y=tm*0.0001;sparks.rotation.y=tm*0.00006;renderer.render(scene,cam);requestAnimationFrame(loop);}
+ resize();addEventListener('resize',resize);requestAnimationFrame(loop);
+})();
+
+function setLang(l){lang=l;localStorage.setItem('iram-lang',l);document.documentElement.lang=l;document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));document.querySelectorAll('[data-fr]').forEach(el=>{const v=el.dataset[l];if(v!=null)el.innerHTML=v;});renderDiam();updateEstimate();applyContact();if(!document.body.classList.contains('loading'))scrambleAll(document.querySelector('.hero'));}
+const segType=$('#segType'),diamWrap=$('#diam');
+function renderDiam(){diamWrap.innerHTML='';if(state.type==='beton')return;DIAMS[state.type].forEach(d=>{const b=document.createElement('button');b.textContent='Ø'+d;if(d===state.diam)b.classList.add('active');b.addEventListener('click',()=>{state.diam=d;renderDiam();updateEstimate();});diamWrap.appendChild(b);});}
+segType.addEventListener('click',e=>{const b=e.target.closest('button[data-type]');if(!b)return;state.type=b.dataset.type;segType.querySelectorAll('button').forEach(x=>x.classList.toggle('active',x===b));const beton=state.type==='beton';$('#fldDiam').style.display=beton?'none':'';$('#fldQty').style.display=beton?'none':'';$('#fldVol').style.display=beton?'':'none';$('#rDiamRow').style.display=beton?'none':'flex';if(!beton&&!DIAMS[state.type].includes(state.diam))state.diam=DIAMS[state.type][0];renderDiam();updateEstimate();});
+const qtyRange=$('#qtyRange'),qtyInput=$('#qtyInput'),volInput=$('#volInput');
+qtyRange.addEventListener('input',()=>{state.qty=+qtyRange.value;qtyInput.value=qtyRange.value;updateEstimate();});
+qtyInput.addEventListener('input',()=>{let v=parseInt(qtyInput.value.replace(/\D/g,''))||0;state.qty=v;if(v<=100)qtyRange.value=v;updateEstimate();});
+volInput.addEventListener('input',()=>{state.vol=parseInt(volInput.value.replace(/\D/g,''))||0;updateEstimate();});
+function typeName(){return state.type==='local'?L[lang].local:state.type==='import'?L[lang].import:L[lang].beton;}
+let at;function setTotal(val){const el=$('#estTotal');clearInterval(at);let i=0;at=setInterval(()=>{i++;el.textContent=fmt(val*(i/18))+' F';if(i>=18){el.textContent=fmt(val)+' F';clearInterval(at);}},16);}
+function updateEstimate(){const t=L[lang];$('#rType').textContent=typeName();if(state.type==='beton'){clearInterval(at);$('#estTotal').textContent=t.onQuote;$('#estUnit').textContent='Volume: '+state.vol+' m³';$('#rQty').textContent=state.vol+' m³';}else{const u=PRICES[state.type];setTotal(u*state.qty);$('#estUnit').textContent=t.from+' '+fmt(u)+' '+t.perT;$('#rDiam').textContent='Ø'+state.diam;$('#rQty').textContent=state.qty+' '+t.tonnes;}}
+function buildMsg(){const t=L[lang];const n=$('#cName').value.trim(),p=$('#cPhone').value.trim(),c=$('#cCity').value.trim(),m=$('#cMsg').value.trim();let o=[t.subj,''];o.push(t.product+': '+typeName());if(state.type!=='beton'){o.push(t.diam+': Ø'+state.diam);o.push(t.qty+': '+state.qty+' '+t.tonnes);o.push((lang==='fr'?'Estimation: ':'Estimate: ')+fmt(PRICES[state.type]*state.qty)+' F');}else o.push('Volume: '+state.vol+' m³');o.push('');if(n)o.push((lang==='fr'?'Nom: ':'Name: ')+n);if(p)o.push((lang==='fr'?'Tél: ':'Phone: ')+p);if(c)o.push((lang==='fr'?'Ville: ':'City: ')+c);if(m)o.push('Message: '+m);return o.join('\n');}
+function toast(m){const e=$('#toast');e.textContent=m;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),2600);}
+$('#sendWa').addEventListener('click',e=>{e.preventDefault();window.open('https://wa.me/'+IRAM.whatsapp+'?text='+encodeURIComponent(buildMsg()),'_blank');toast(L[lang].sent);});
+$('#sendMail').addEventListener('click',e=>{e.preventDefault();window.location.href='mailto:'+IRAM.email+'?subject='+encodeURIComponent(L[lang].subj)+'&body='+encodeURIComponent(buildMsg());toast(L[lang].mail);});
+document.querySelectorAll('[data-prefill]').forEach(b=>b.addEventListener('click',()=>{const btn=segType.querySelector('button[data-type="'+b.dataset.prefill+'"]');if(btn)btn.click();}));
+function applyContact(){const wa='https://wa.me/'+IRAM.whatsapp+'?text='+encodeURIComponent(L[lang].subj);['#ciWa','#ctaWa','#waFloat'].forEach(s=>{const el=$(s);if(el)el.href=wa;});$('#ciWaTxt').textContent=IRAM.whatsappDisplay;$('#ciMail').href='mailto:'+IRAM.email;$('#ciMailTxt').textContent=IRAM.email;}
+document.querySelectorAll('.lang button').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+
+/* ===== Gallery cinematic reveal + lightbox ===== */
+(function(){
+ const figs=[...document.querySelectorAll('.gal figure')];if(!figs.length)return;
+ const gio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const i=figs.indexOf(e.target);setTimeout(()=>e.target.classList.add('shown'),i*90);gio.unobserve(e.target);}}),{threshold:.2});
+ figs.forEach(f=>gio.observe(f));
+ const lb=$('#lb'),media=$('#lbMedia'),cap=$('#lbCap');let idx=0;
+ const items=figs.map(f=>{const im=f.querySelector('img'),v=f.querySelector('video');return{src:(im||v).getAttribute('src'),video:!!v,cap:(f.querySelector('figcaption')||{}).textContent||''};});
+ function show(i){idx=(i+items.length)%items.length;const it=items[idx];media.innerHTML=it.video?'<video src="'+it.src+'" autoplay muted loop playsinline></video>':'<img src="'+it.src+'" alt="">';cap.textContent=it.cap;}
+ figs.forEach((f,i)=>f.addEventListener('click',()=>{show(i);lb.classList.add('open');}));
+ $('#lbX').addEventListener('click',()=>lb.classList.remove('open'));
+ $('#lbP').addEventListener('click',e=>{e.stopPropagation();show(idx-1);});
+ $('#lbN').addEventListener('click',e=>{e.stopPropagation();show(idx+1);});
+ lb.addEventListener('click',e=>{if(e.target===lb)lb.classList.remove('open');});
+ addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')lb.classList.remove('open');if(e.key==='ArrowLeft')show(idx-1);if(e.key==='ArrowRight')show(idx+1);});
+})();
+
+/* ===== Devis PDF ===== */
+$('#dlPdf').addEventListener('click',function(e){e.preventDefault();
+ if(!(window.jspdf&&window.jspdf.jsPDF)){toast('PDF…');return;}
+ const {jsPDF}=window.jspdf;const d=new jsPDF({unit:'pt',format:'a4'});const W=595;
+ d.setFillColor(7,7,8);d.rect(0,0,W,118,'F');
+ d.setTextColor(178,214,59);d.setFont('helvetica','bold');d.setFontSize(22);d.text('IRAM INTERNATIONAL',40,62);
+ d.setTextColor(150,150,150);d.setFont('helvetica','normal');d.setFontSize(9);d.text('THE METAL CITY — International & Regional African Metal',40,82);
+ d.setTextColor(178,214,59);d.setFontSize(9);d.text((lang==='fr'?'DEVIS INDICATIF':'INDICATIVE QUOTE'),40,102);
+ let y=158;d.setTextColor(20,20,20);d.setFont('helvetica','bold');d.setFontSize(13);d.text((lang==='fr'?'Détail de la demande':'Request details'),40,y);y+=26;
+ d.setFont('helvetica','normal');d.setFontSize(11);d.setTextColor(60,60,60);
+ const rows=[[L[lang].product,typeName()]];
+ if(state.type!=='beton'){rows.push([L[lang].diam,'Ø'+state.diam]);rows.push([L[lang].qty,state.qty+' '+L[lang].tonnes]);}else{rows.push(['Volume',state.vol+' m³']);}
+ rows.forEach(r=>{d.text(r[0],40,y);d.text(String(r[1]),320,y);y+=20;});
+ y+=8;d.setDrawColor(220);d.line(40,y,W-40,y);y+=28;
+ d.setFont('helvetica','bold');d.setFontSize(13);d.setTextColor(20,20,20);
+ const tot=state.type==='beton'?L[lang].onQuote:(fmt(PRICES[state.type]*state.qty)+' F CFA');
+ d.text((lang==='fr'?'Estimation indicative':'Indicative estimate'),40,y);d.text(tot,320,y);y+=28;
+ d.setFont('helvetica','normal');d.setFontSize(9);d.setTextColor(130,130,130);
+ d.text((lang==='fr'?'Prix indicatifs hors transport. Devis final confirmé par IRAM selon disponibilité.':'Indicative prices excl. transport. Final quote confirmed by IRAM.'),40,y,{maxWidth:W-80});y+=38;
+ const n=$('#cName').value.trim(),p=$('#cPhone').value.trim(),c=$('#cCity').value.trim();
+ if(n||p||c){d.setTextColor(20,20,20);d.setFont('helvetica','bold');d.setFontSize(11);d.text('Client',40,y);y+=18;d.setFont('helvetica','normal');d.setTextColor(60,60,60);if(n){d.text('Nom: '+n,40,y);y+=15;}if(p){d.text('Tel: '+p,40,y);y+=15;}if(c){d.text('Ville: '+c,40,y);y+=15;}}
+ d.setDrawColor(230);d.line(40,800,W-40,800);d.setTextColor(120,120,120);d.setFontSize(8.5);
+ d.text('WhatsApp +221 77 885 53 66   |   IramInternationalsn@gmail.com   |   www.iraminternational.com',40,816,{maxWidth:W-80});
+ d.save('Devis-IRAM-International.pdf');toast(lang==='fr'?'Devis PDF téléchargé':'Quote PDF downloaded');
+});
+
+/* ===== Smooth inertial scroll (Lenis) ===== */
+(function(){
+ if(!window.Lenis||matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+ const lenis=new Lenis({duration:1.15,smoothWheel:true,wheelMultiplier:1,lerp:0.09});
+ function raf(t){lenis.raf(t);requestAnimationFrame(raf);}requestAnimationFrame(raf);
+ document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const id=a.getAttribute('href');if(id.length>1){const el=document.querySelector(id);if(el){e.preventDefault();lenis.scrollTo(el,{offset:0});}}}));
+})();
+
+renderDiam();updateEstimate();applyContact();setLang(lang);
+</script>
+</body>
+</html>
