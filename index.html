@@ -240,6 +240,30 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
 @media(max-width:1024px){.idx{display:none}.man-grid,.c-grid{grid-template-columns:1fr;gap:40px}.terminal{grid-template-columns:1fr}.config{border-right:0;border-bottom:1px solid var(--line)}.steps,.why-grid{grid-template-columns:1fr 1fr}.prow{grid-template-columns:60px 1fr;gap:18px}.prow .meta{grid-column:1/-1}}
 @media(max-width:760px){.wrap{padding:0 22px}.nav-links{display:none}.burger{display:flex}.nav-links.open{display:flex;position:fixed;inset:64px 16px auto 16px;flex-direction:column;background:var(--bg2);border:1px solid var(--line);padding:8px}.nav-links.open a{padding:16px;border-bottom:1px solid var(--line-2)}.chip{display:none}.gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:120px}.g1,.g2,.g3,.g4,.g5,.g6{grid-column:span 2;grid-row:span 2}.steps,.why-grid{grid-template-columns:1fr}.grid2{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.001s!important}.rv{opacity:1;transform:none}}
+/* ===== FILM ===== */
+.sec.film{padding-top:0}
+.film-frame{position:relative;aspect-ratio:16/9;width:100%;border:1px solid var(--line);background:radial-gradient(120% 140% at 50% 0%,#141519 0%,#0a0a0c 60%,#070708 100%);overflow:hidden;cursor:pointer;transition:border-color .4s ease,transform .5s cubic-bezier(.16,1,.3,1)}
+.film-frame:hover{border-color:var(--acc);transform:translateY(-3px)}
+.film-poster{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px}
+.film-poster::before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(178,214,59,.05),transparent 40%),repeating-linear-gradient(90deg,transparent 0 38px,rgba(255,255,255,.014) 38px 39px);pointer-events:none}
+.film-mk{width:96px;height:96px;opacity:.9;filter:drop-shadow(0 0 24px rgba(178,214,59,.15))}
+.film-wm{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.42em;color:var(--steel);text-transform:uppercase}
+.film-play{position:absolute;width:88px;height:88px;border-radius:50%;border:1.5px solid var(--acc);background:rgba(178,214,59,.08);color:var(--acc);display:grid;place-items:center;cursor:pointer;transition:all .35s ease;backdrop-filter:blur(2px)}
+.film-play svg{width:34px;height:34px;fill:currentColor;margin-left:4px}
+.film-frame:hover .film-play{background:var(--acc);color:#070708;box-shadow:0 0 0 10px rgba(178,214,59,.08),0 0 40px rgba(178,214,59,.3);transform:scale(1.06)}
+.film-cap{position:absolute;left:22px;bottom:20px;display:flex;flex-direction:column;gap:3px;font-size:11px}
+.film-cap .mono{font-family:'JetBrains Mono',monospace;letter-spacing:.16em;text-transform:uppercase}
+.film-cap .mono:not(.acc){color:var(--steel)}
+.film-corner{position:absolute;width:16px;height:16px;border:2px solid var(--acc);opacity:.6}
+.film-corner.tl{top:12px;left:12px;border-right:0;border-bottom:0}.film-corner.tr{top:12px;right:12px;border-left:0;border-bottom:0}
+.film-corner.bl{bottom:12px;left:12px;border-right:0;border-top:0}.film-corner.br{bottom:12px;right:12px;border-left:0;border-top:0}
+#filmModal{position:fixed;inset:0;z-index:200;background:rgba(4,4,5,.94);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:3vh 3vw}
+#filmModal.on{display:flex}
+.fm-stage{position:relative;width:100%;max-width:min(1600px,158vh);aspect-ratio:16/9;border:1px solid var(--line);box-shadow:0 40px 120px rgba(0,0,0,.6)}
+.fm-stage iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#070708}
+.fm-x{position:absolute;top:18px;right:22px;z-index:2;width:46px;height:46px;border:1px solid var(--line);background:rgba(10,10,12,.7);color:var(--ink);font-size:18px;cursor:pointer;transition:all .3s}
+.fm-x:hover{border-color:var(--acc);color:var(--acc)}
+@media(max-width:760px){.film-mk{width:64px;height:64px}.film-play{width:66px;height:66px}.film-play svg{width:26px;height:26px}.film-wm{font-size:11px}}
 </style>
 </head>
 <body class="loading">
@@ -315,6 +339,21 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
   <span class="hl">FER À BÉTON<span class="dot"> ◆ </span></span><span>FE 500<span class="dot"> ◆ </span></span><span class="hl">Ø6 — Ø32<span class="dot"> ◆ </span></span><span>LOCAL & IMPORT<span class="dot"> ◆ </span></span><span class="hl">QUALITÉ SANS COMPROMIS<span class="dot"> ◆ </span></span><span>DAKAR<span class="dot"> ◆ </span></span><span class="hl">THE METAL CITY<span class="dot"> ◆ </span></span>
   <span class="hl">FER À BÉTON<span class="dot"> ◆ </span></span><span>FE 500<span class="dot"> ◆ </span></span><span class="hl">Ø6 — Ø32<span class="dot"> ◆ </span></span><span>LOCAL & IMPORT<span class="dot"> ◆ </span></span><span class="hl">QUALITÉ SANS COMPROMIS<span class="dot"> ◆ </span></span><span>DAKAR<span class="dot"> ◆ </span></span><span class="hl">THE METAL CITY<span class="dot"> ◆ </span></span>
 </div></div>
+
+<section class="sec film" id="film">
+  <div class="wrap">
+    <div class="sec-num rv"><span data-fr="◆ / Le film" data-en="◆ / The film">◆ / Le film</span></div>
+    <div class="film-frame rv d1" id="filmOpen" role="button" tabindex="0" aria-label="Lire le film de présentation">
+      <div class="film-poster">
+        <svg class="film-mk" viewBox="0 0 200 200"><path d="M60 20 H140 V140 H20 V60" fill="none" stroke="#9aa0a6" stroke-width="6.4" stroke-linecap="square"/><rect x="73.2" y="48" width="13.6" height="64" fill="#b2d63b"/><rect x="56" y="48" width="48" height="10" fill="#b2d63b"/><rect x="56" y="102" width="48" height="10" fill="#b2d63b"/></svg>
+        <div class="film-wm">IRAM · THE METAL CITY</div>
+        <button class="film-play" aria-label="Lire le film"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+        <div class="film-cap"><span class="mono acc" data-fr="Film de présentation" data-en="Presentation film">Film de présentation</span><span class="mono" data-fr="30 s · cliquez pour le plein écran" data-en="30 s · click for fullscreen">30 s · cliquez pour le plein écran</span></div>
+      </div>
+      <span class="film-corner tl"></span><span class="film-corner tr"></span><span class="film-corner bl"></span><span class="film-corner br"></span>
+    </div>
+  </div>
+</section>
 
 <section class="sec manifesto" id="manifesto">
   <div class="wrap">
@@ -489,6 +528,7 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
 
 <a class="wa" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2z"/></svg></a>
 <div id="lb" aria-hidden="true"><button class="x" id="lbX" aria-label="Fermer">✕</button><button class="nav prev" id="lbP" aria-label="Précédent">‹</button><button class="nav next" id="lbN" aria-label="Suivant">›</button><div class="media" id="lbMedia"></div><div class="cap" id="lbCap"></div></div>
+<div id="filmModal" aria-hidden="true"><button class="fm-x" id="fmX" aria-label="Fermer">✕</button><div class="fm-stage"><iframe id="fmFrame" title="IRAM International — Film de présentation" allow="autoplay; fullscreen"></iframe></div></div>
 <div class="toast" id="toast"></div>
 
 <script>
@@ -647,6 +687,13 @@ $('#dlPdf').addEventListener('click',function(e){e.preventDefault();
 })();
 
 renderDiam();updateEstimate();applyContact();setLang(lang);
+/* ---- Film modal ---- */
+(function(){const o=document.getElementById('filmOpen'),m=document.getElementById('filmModal'),f=document.getElementById('fmFrame'),xb=document.getElementById('fmX');if(!o||!m||!f)return;const SRC='promo.html';
+ function open(){f.src=SRC;m.classList.add('on');m.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';if(window.lenis)lenis.stop();}
+ function close(){m.classList.remove('on');m.setAttribute('aria-hidden','true');f.src='';document.body.style.overflow='';if(window.lenis)lenis.start();}
+ o.addEventListener('click',open);o.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open();}});
+ xb.addEventListener('click',close);m.addEventListener('click',e=>{if(e.target===m)close();});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&m.classList.contains('on'))close();});})();
 </script>
 </body>
 </html>
