@@ -641,9 +641,8 @@ document.querySelectorAll('.lang button').forEach(b=>b.addEventListener('click',
 (function(){
  const gal=document.querySelector('.gal');const figs=[...document.querySelectorAll('.gal figure')];if(!figs.length)return;
  let shown=false;const revealAll=()=>{if(shown)return;shown=true;figs.forEach((f,i)=>setTimeout(()=>f.classList.add('shown'),i*80));};
- const gio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){revealAll();gio.disconnect();}}),{threshold:.03,rootMargin:'0px 0px -5% 0px'});
- gio.observe(gal);
- setTimeout(()=>{const r=gal.getBoundingClientRect();if(!shown&&r.top<innerHeight&&r.bottom>0)revealAll();},4000);
+ (function check(){if(shown)return;const r=gal.getBoundingClientRect();if(r.top<innerHeight*0.92&&r.bottom>0){revealAll();return;}requestAnimationFrame(check);})();
+ addEventListener('load',()=>{const r=gal.getBoundingClientRect();if(!shown&&r.top<innerHeight&&r.bottom>0)revealAll();});
  const lb=$('#lb'),media=$('#lbMedia'),cap=$('#lbCap');let idx=0;
  const items=figs.map(f=>{const im=f.querySelector('img'),v=f.querySelector('video');return{src:(im||v).getAttribute('src'),video:!!v,cap:(f.querySelector('figcaption')||{}).textContent||''};});
  function show(i){idx=(i+items.length)%items.length;const it=items[idx];media.innerHTML=it.video?'<video src="'+it.src+'" autoplay muted loop playsinline></video>':'<img src="'+it.src+'" alt="">';cap.textContent=it.cap;}
