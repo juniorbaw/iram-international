@@ -639,9 +639,11 @@ document.querySelectorAll('.lang button').forEach(b=>b.addEventListener('click',
 
 /* ===== Gallery cinematic reveal + lightbox ===== */
 (function(){
- const figs=[...document.querySelectorAll('.gal figure')];if(!figs.length)return;
- const gio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const i=figs.indexOf(e.target);setTimeout(()=>e.target.classList.add('shown'),i*90);gio.unobserve(e.target);}}),{threshold:.2});
- figs.forEach(f=>gio.observe(f));
+ const gal=document.querySelector('.gal');const figs=[...document.querySelectorAll('.gal figure')];if(!figs.length)return;
+ let shown=false;const revealAll=()=>{if(shown)return;shown=true;figs.forEach((f,i)=>setTimeout(()=>f.classList.add('shown'),i*80));};
+ const gio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){revealAll();gio.disconnect();}}),{threshold:.03,rootMargin:'0px 0px -5% 0px'});
+ gio.observe(gal);
+ setTimeout(()=>{const r=gal.getBoundingClientRect();if(!shown&&r.top<innerHeight&&r.bottom>0)revealAll();},4000);
  const lb=$('#lb'),media=$('#lbMedia'),cap=$('#lbCap');let idx=0;
  const items=figs.map(f=>{const im=f.querySelector('img'),v=f.querySelector('video');return{src:(im||v).getAttribute('src'),video:!!v,cap:(f.querySelector('figcaption')||{}).textContent||''};});
  function show(i){idx=(i+items.length)%items.length;const it=items[idx];media.innerHTML=it.video?'<video src="'+it.src+'" autoplay muted loop playsinline></video>':'<img src="'+it.src+'" alt="">';cap.textContent=it.cap;}
