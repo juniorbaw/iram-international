@@ -288,6 +288,23 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
 .btn-rappel{background:transparent;border:1px solid var(--acc);color:var(--acc)}
 .btn-rappel:hover{background:var(--acc);color:var(--bg)}
 @media(max-width:760px){.cat-dl{padding:22px;flex-direction:column;align-items:flex-start}.cat-dl .btn{width:100%;justify-content:center}}
+/* ===== MOBILE HARDENING ===== */
+@media(max-width:760px){
+ .g7{grid-column:span 2;grid-row:span 2}
+ .seg{flex-direction:column}
+ .seg button{border-right:0;border-bottom:1px solid var(--line)}
+ .seg button:last-child{border-bottom:0}
+ .hero-stats{gap:24px}
+ .hero-cta .btn{flex:1 1 auto;justify-content:center}
+ .faq-q{font-size:1.05rem;padding-right:40px}
+ .cat-dl .cat-txt b{font-size:1.05rem}
+ .agent{flex-wrap:wrap}
+}
+@media(max-width:400px){
+ .hero-stats{gap:18px}
+ .hero-stats .s b{font-size:1.35rem}
+ .diam-line span{font-size:.6rem;padding:4px 6px}
+}
 </style>
 <!-- Google Analytics (GA4) — remplacez G-XXXXXXXXXX par votre ID de mesure pour activer le suivi -->
 <script>
