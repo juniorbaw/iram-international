@@ -633,7 +633,7 @@ function buildMsg(){const t=L[lang];const n=$('#cName').value.trim(),p=$('#cPhon
 function toast(m){const e=$('#toast');e.textContent=m;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),2600);}
 $('#sendWa').addEventListener('click',e=>{e.preventDefault();window.open('https://wa.me/'+IRAM.whatsapp+'?text='+encodeURIComponent(buildMsg()),'_blank');toast(L[lang].sent);});
 $('#sendMail').addEventListener('click',e=>{e.preventDefault();window.location.href='mailto:'+IRAM.email+'?subject='+encodeURIComponent(L[lang].subj)+'&body='+encodeURIComponent(buildMsg());toast(L[lang].mail);});
-document.querySelectorAll('[data-prefill]').forEach(b=>b.addEventListener('click',()=>{const btn=segType.querySelector('button[data-type="'+b.dataset.prefill+'"]');if(btn)btn.click();}));
+document.querySelectorAll('[data-prefill]').forEach(b=>b.addEventListener('click',()=>{const btn=segType.querySelector('button[data-type="'+b.dataset.prefill+'"]');if(btn)btn.click();const q=document.getElementById('quote');if(!q)return;if(window.__lenis){window.__lenis.scrollTo(q,{offset:0});}else{q.scrollIntoView({behavior:'smooth'});}}));
 function applyContact(){const wa='https://wa.me/'+IRAM.whatsapp+'?text='+encodeURIComponent(L[lang].subj);['#ciWa','#ctaWa','#waFloat'].forEach(s=>{const el=$(s);if(el)el.href=wa;});$('#ciWaTxt').textContent=IRAM.whatsappDisplay;$('#ciMail').href='mailto:'+IRAM.email;$('#ciMailTxt').textContent=IRAM.email;}
 document.querySelectorAll('.lang button').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
 
@@ -683,7 +683,7 @@ $('#dlPdf').addEventListener('click',function(e){e.preventDefault();
 /* ===== Smooth inertial scroll (Lenis) ===== */
 (function(){
  if(!window.Lenis||matchMedia('(prefers-reduced-motion:reduce)').matches)return;
- const lenis=new Lenis({duration:1.15,smoothWheel:true,wheelMultiplier:1,lerp:0.09});
+ const lenis=new Lenis({duration:1.15,smoothWheel:true,wheelMultiplier:1,lerp:0.09});window.__lenis=lenis;
  function raf(t){lenis.raf(t);requestAnimationFrame(raf);}requestAnimationFrame(raf);
  document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const id=a.getAttribute('href');if(id.length>1){const el=document.querySelector(id);if(el){e.preventDefault();lenis.scrollTo(el,{offset:0});}}}));
 })();
