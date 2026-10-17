@@ -4,7 +4,7 @@
 
 # IRAM International — The Metal City
 
-**Site vitrine immersif et bilingue pour un distributeur de fer à béton et matériaux de construction (Dakar, Sénégal · livraison Sénégal & Mali).**
+**Site vitrine immersif et bilingue pour un distributeur de fer à béton et matériaux de construction (Dakar, Sénégal · sourcing international, livraison au Sénégal).**
 
 [![Voir le site](https://img.shields.io/badge/●_LIVE-www.iraminternational.com-b2d63b?style=for-the-badge&labelColor=070708)](https://www.iraminternational.com)
 &nbsp;
@@ -18,7 +18,7 @@
 
 ## 🏗️ À propos
 
-**IRAM International** (*International & Regional African Metal — « The Metal City »*) distribue du fer à béton local et importé **FE 500**, du béton prêt à l'emploi et des matériaux de construction premium. Basée à Dakar, l'entreprise livre au **Sénégal et au Mali**.
+**IRAM International** (*International & Regional African Metal — « The Metal City »*) distribue du fer à béton local et importé **FE 500**, du béton prêt à l'emploi et des matériaux de construction premium. Basée à Dakar, l'entreprise livre partout au **Sénégal** (gratuitement dans Dakar).
 
 Ce dépôt héberge le site vitrine : une expérience **cinématique, immersive et bilingue (FR / EN)**, pensée pour transformer un visiteur en demande de devis.
 
